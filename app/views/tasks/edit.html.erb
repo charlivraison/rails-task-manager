@@ -1,11 +1,10 @@
-<h1>Edit task</h1>
-<%= form_with model: @task, local: true do |form| %>
-  <div>
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-    <%= form.label :details %>
-    <%= form.text_field :details %>
-  </div>
-    <%= form.submit "Créer Tâche" %>
-  </div>
-<% end %>
+<div class="container mt-5">
+  <h1>Edit task</h1>
+
+  <%= render "form", task: @task %>
+
+  <hr>
+  <%= link_to tasks_path do %>
+    <i class="fa-solid fa-arrow-rotate-left"></i> Back to list
+  <% end %>
+</div>
